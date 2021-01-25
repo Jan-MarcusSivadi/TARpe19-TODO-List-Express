@@ -13,10 +13,12 @@
     </div>
 
     <div class="box">
-        <div class="item">
-            <input type="checkbox">
-            <p>test</p>
-        </div>
+        <% for(let i = 0; i < todoItems.length; i++) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= todoItems[i].description %></p>
+            </div>
+        <% } %> 
 
         <form action="/" method="POST">
             <input type="text" name="newTask" placeholder="Add new Task">
@@ -25,7 +27,7 @@
     </div>
 
     <footer>
-        <span>Jan-Marcus S. &#169 2021</span>
+        <span class="footer">Jan-Marcus S. &#169 2021</span>
     </footer>
     
 </body>
