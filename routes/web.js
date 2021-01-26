@@ -9,6 +9,8 @@ const router = express.Router();
 router.get('/', tasksController.getMainPage);
 // post new task
 router.post('/', tasksController.postNewTask);
+// delete task
+router.post('/delete', tasksController.deleteTask);
 // error 404
 router.get('*', error404Controller.getErrorPage);
 
